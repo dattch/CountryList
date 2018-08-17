@@ -15,9 +15,12 @@ class CountryCell: UITableViewCell {
     
     var country: Country? {
         didSet {
-            if let name = country!.name {
+            guard let ctry = country else {return}
+            if let name = ctry.name, let flag = ctry.flag {
+                nameLabel?.text = "\(flag) \(name)"
+            }else if let name = ctry.name {
                 nameLabel?.text = "\(name)"
-                extensionLabel?.text = "+\(country!.phoneExtension)"
+                extensionLabel?.text = "+\(ctry.phoneExtension)"
             }
         }
     }
