@@ -68,12 +68,8 @@ public class CountryList: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.tableHeaderView = searchController?.searchBar
         self.searchController?.hidesNavigationBarDuringPresentation = false
         
-//        self.searchController?.searchBar.backgroundImage = UIImage()
         self.searchController?.dimsBackgroundDuringPresentation = false
-//        self.searchController?.searchBar.barTintColor = UIColor.white
         self.searchController?.searchBar.placeholder = "Search"
-//        self.searchController?.searchBar.tintColor = Constants.Colors.mainColor
-//        self.searchController?.searchBar.backgroundColor = UIColor.white
         self.searchController?.searchResultsUpdater = self
     }
     
