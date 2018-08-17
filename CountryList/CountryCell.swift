@@ -18,6 +18,7 @@ class CountryCell: UITableViewCell {
             guard let ctry = country else {return}
             if let name = ctry.name, let flag = ctry.flag {
                 nameLabel?.text = "\(flag) \(name)"
+                extensionLabel?.text = "+\(ctry.phoneExtension)"
             }else if let name = ctry.name {
                 nameLabel?.text = "\(name)"
                 extensionLabel?.text = "+\(ctry.phoneExtension)"
