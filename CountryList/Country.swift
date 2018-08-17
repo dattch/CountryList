@@ -14,7 +14,7 @@ public class Country: NSObject {
     public var phoneExtension: String
     
     public var name: String? {
-        let current = Locale(identifier: "en_US")
+        let current = Locale.current
         return current.localizedString(forRegionCode: countryCode) ?? nil
     }
     
