@@ -22,7 +22,7 @@ public class Country: NSObject {
         return flag(country: countryCode)
     }
     
-    init(countryCode: String, phoneExtension: String) {
+    public init(countryCode: String, phoneExtension: String) {
         self.countryCode = countryCode
         self.phoneExtension = phoneExtension
     }
