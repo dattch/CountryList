@@ -24,7 +24,7 @@ public class CountryList: UIViewController, UITableViewDelegate, UITableViewData
     private var filteredCountries = [Country]()
 
     open weak var delegate: CountryListDelegate?
-    init(title: String? = nil, searchPlaceholder: String? = nil){
+    public init(title: String? = nil, searchPlaceholder: String? = nil){
         super.init(nibName: nil, bundle: nil)
         self.title = title
         self.placeholder = searchPlaceholder
