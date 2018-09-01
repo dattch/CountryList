@@ -12,8 +12,9 @@ import CountryList
 class ViewController: UIViewController, CountryListDelegate {
 
     @IBOutlet weak var selectedCountryLabel: UILabel!
-    
-    var countryList = CountryList()
+
+    //Here, you can localize the title and the search placeholder strings if needed
+    var countryList = CountryList(title: "Country List", searchPlaceholder: "Search")
     
     override func viewDidLoad() {
         super.viewDidLoad()
