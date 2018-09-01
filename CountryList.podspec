@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name                  = "LocalizedCountryList"
+  s.name                  = "CountryList"
   s.version               = "1.2"
   s.summary               = "Easily present a list of countries and their respective information."
   s.description           = <<-DESC
