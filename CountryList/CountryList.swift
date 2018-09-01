@@ -16,13 +16,24 @@ public protocol CountryListDelegate: class {
 
 public class CountryList: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     
-    var tableView: UITableView!
-    var searchController: UISearchController?
-    var resultsController = UITableViewController()
-    var filteredCountries = [Country]()
-    
+    private var tableView: UITableView!
+    private var searchController: UISearchController?
+    private var placeholder: String?
+
+    private var resultsController = UITableViewController()
+    private var filteredCountries = [Country]()
+
     open weak var delegate: CountryListDelegate?
-    
+    init(title: String? = nil, searchPlaceholder: String? = nil){
+        super.init(nibName: nil, bundle: nil)
+        self.title = title
+        self.placeholder = searchPlaceholder
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     private var countryList: [Country] {
         let countries = Countries()
         let countryList = countries.countries
@@ -32,7 +43,6 @@ public class CountryList: UIViewController, UITableViewDelegate, UITableViewData
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Country List"
         self.view.backgroundColor = .white
         
         tableView = UITableView(frame: view.frame)
@@ -71,8 +81,12 @@ public class CountryList: UIViewController, UITableViewDelegate, UITableViewData
         self.searchController?.hidesNavigationBarDuringPresentation = false
         
         self.searchController?.dimsBackgroundDuringPresentation = false
-        self.searchController?.searchBar.placeholder = "Search"
+        self.searchController?.searchBar.placeholder = placeholder
         self.searchController?.searchResultsUpdater = self
+    }
+
+    public func setSearchBarPlaceholder(_ placeholder: String){
+        self.searchController?.searchBar.placeholder = placeholder
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
