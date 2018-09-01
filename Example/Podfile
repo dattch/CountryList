@@ -6,6 +6,6 @@ target 'CountryListExample' do
   use_frameworks!
 
   # Pods for CountryListExample
-pod 'CountryList'
+  pod 'CountryList', :git => 'https://github.com/mmdock/CountryList.git', :branch => 'master'
 
 end
