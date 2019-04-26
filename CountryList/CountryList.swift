@@ -22,12 +22,16 @@ public class CountryList: UIViewController, UITableViewDelegate, UITableViewData
 
     private var resultsController = UITableViewController()
     private var filteredCountries = [Country]()
+    private var ignoredCountryCodes = [String]()
 
     open weak var delegate: CountryListDelegate?
-    public init(title: String? = nil, searchPlaceholder: String? = nil){
+    public init(title: String? = nil, searchPlaceholder: String? = nil, ignoreCountryCodes: [String]? = nil){
         super.init(nibName: nil, bundle: nil)
         self.title = title
         self.placeholder = searchPlaceholder
+        if let ignorableCountryCodes = ignoreCountryCodes{
+            self.ignoredCountryCodes = ignorableCountryCodes
+        }
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -36,7 +40,10 @@ public class CountryList: UIViewController, UITableViewDelegate, UITableViewData
 
     private var countryList: [Country] {
         let countries = Countries()
-        let countryList = countries.countries
+        var countryList = countries.countries
+        if self.ignoredCountryCodes.count > 0 {
+            countryList = countryList.filter({!self.ignoredCountryCodes.contains($0.countryCode) })
+        }
         return countryList
     }
     
