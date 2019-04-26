@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CountryList
+import LocalizedCountryList
 
 class ViewController: UIViewController, CountryListDelegate {
 

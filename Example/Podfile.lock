@@ -1,22 +1,16 @@
 PODS:
-  - CountryList (1.1)
+  - LocalizedCountryList (1.2)
 
 DEPENDENCIES:
-  - CountryList (from `https://github.com/mmdock/CountryList.git`, branch `master`)
+  - LocalizedCountryList (from `../`)
 
 EXTERNAL SOURCES:
-  CountryList:
-    :branch: master
-    :git: https://github.com/mmdock/CountryList.git
-
-CHECKOUT OPTIONS:
-  CountryList:
-    :commit: 704a5922563fd9d37affefdaa80abe3716e37ef5
-    :git: https://github.com/mmdock/CountryList.git
+  LocalizedCountryList:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  CountryList: 48226f29b64802af50f2caafc6aa87df54e0f88e
+  LocalizedCountryList: 7fbbf5f3bbf64ccc9afd493cbb01c8168400f46f
 
-PODFILE CHECKSUM: ea6b61f6fe8d816a3368d0c5b669d51c07f8b086
+PODFILE CHECKSUM: a20ff46cb1c1b7745698b089f25304f900631b45
 
 COCOAPODS: 1.5.3
