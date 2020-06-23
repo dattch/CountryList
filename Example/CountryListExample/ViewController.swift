@@ -11,6 +11,8 @@ import LocalizedCountryList
 
 class ViewController: UIViewController, CountryListDelegate {
 
+    
+    
     @IBOutlet weak var selectedCountryLabel: UILabel!
 
     //Here, you can localize the title and the search placeholder strings if needed
@@ -22,7 +24,7 @@ class ViewController: UIViewController, CountryListDelegate {
         countryList.delegate = self
     }
     
-    @IBAction func handleCountryList(_ sender: Any) {
+    @IBAction func handleCountryList(_ sender: UIButton) {
         let navController = UINavigationController(rootViewController: countryList)
         self.present(navController, animated: true, completion: nil)
     }

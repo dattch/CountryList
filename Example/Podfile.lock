@@ -1,5 +1,5 @@
 PODS:
-  - LocalizedCountryList (1.2)
+  - LocalizedCountryList (2.0.1)
 
 DEPENDENCIES:
   - LocalizedCountryList (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LocalizedCountryList: 7fbbf5f3bbf64ccc9afd493cbb01c8168400f46f
+  LocalizedCountryList: a3f47d3be1f8d60610c842dff53d321c2bf4d4aa
 
-PODFILE CHECKSUM: a20ff46cb1c1b7745698b089f25304f900631b45
+PODFILE CHECKSUM: ad91f47a6d1a5a49fddd7e285dd107e954c713a6
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4
