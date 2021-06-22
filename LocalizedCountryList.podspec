@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name                  = "LocalizedCountryList"
-  s.version               = "2.0.1"
+  s.version               = "2.0.2"
   s.summary               = "Easily present a list of countries and their respective information."
   s.description           = <<-DESC
 CountryList makes it easy to present the user with a list of Countries and their respective information, like country code, phone extension and flag.
