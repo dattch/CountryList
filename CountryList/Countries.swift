@@ -31,7 +31,6 @@ class Countries {
         countries.append(Country(countryCode: "AT", phoneExtension: "43"))
         countries.append(Country(countryCode: "AZ", phoneExtension: "994"))
         
-        
         countries.append(Country(countryCode: "BS", phoneExtension: "1"))
         countries.append(Country(countryCode: "BH", phoneExtension: "973"))
         countries.append(Country(countryCode: "BD", phoneExtension: "880"))
@@ -99,6 +98,7 @@ class Countries {
         countries.append(Country(countryCode: "GA", phoneExtension: "241"))
         countries.append(Country(countryCode: "GM", phoneExtension: "220"))
         countries.append(Country(countryCode: "GE", phoneExtension: "995"))
+        countries.append(Country(countryCode: "GF", phoneExtension: "594"))
         countries.append(Country(countryCode: "DE", phoneExtension: "49"))
         countries.append(Country(countryCode: "GH", phoneExtension: "233"))
         countries.append(Country(countryCode: "GI", phoneExtension: "350"))
