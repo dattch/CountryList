@@ -61,5 +61,10 @@ class CountryCell: UITableViewCell {
         addSubview(extensionLabel!)
         extensionLabel?.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         extensionLabel?.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
+        
+        if #available(iOS 13.0, *){
+            nameLabel?.textColor = .label
+            extensionLabel?.textColor = .secondaryLabel
+        }
     }
 }
