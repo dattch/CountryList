@@ -10,7 +10,7 @@
 
 import UIKit
 
-public protocol CountryListDelegate: class {
+public protocol CountryListDelegate: AnyObject {
     func selectedCountry(country: Country)
 }
 

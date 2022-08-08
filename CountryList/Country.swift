@@ -38,3 +38,20 @@ public class Country: NSObject {
         return String(s)
     }
 }
+
+
+extension Country {
+    static func countryFor(code: String) -> Country? {
+        guard code.count == 2 else {
+            assertionFailure("Country code length not of length 2 will always result in `nil`")
+            return nil
+        }
+        
+        let countries = Countries()
+        let country = countries.countries.first { country in
+            return country.countryCode == code
+        }
+        
+        return country
+    }
+}
