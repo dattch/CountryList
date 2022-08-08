@@ -41,7 +41,7 @@ public class Country: NSObject {
 
 
 extension Country {
-    static func countryFor(code: String) -> Country? {
+    static public func countryFor(code: String) -> Country? {
         guard code.count == 2 else {
             assertionFailure("Country code length not of length 2 will always result in `nil`")
             return nil
