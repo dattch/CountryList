@@ -49,7 +49,7 @@ extension Country {
         
         let countries = Countries()
         let country = countries.countries.first { country in
-            return country.countryCode == code
+            return country.countryCode.caseInsensitiveCompare(code) == .orderedSame
         }
         
         return country
